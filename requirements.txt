@@ -1,0 +1,4 @@
+Flask>=3.0,<4
+requests>=2.31,<3
+typesafe-sdk>=0.1.0
+gunicorn>=22,<24
