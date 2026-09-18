@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: jev-momo
+    runtime: python
+    plan: free
+    region: singapore
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    healthCheckPath: /health
+    envVars:
+      - key: ALPACA_API_KEY
+        sync: false
+      - key: ALPACA_SECRET_KEY
+        sync: false
+      - key: TYPESAFE_API_KEY
+        sync: false
+      - key: ALPACA_FEED
+        value: iex
